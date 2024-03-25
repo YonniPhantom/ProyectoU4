@@ -1,37 +1,19 @@
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.pokemon-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
 }
 
 .pokemon-card {
-    border: 1px solid #ccc;
-    padding: 10px;
     cursor: pointer;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+.modal-body img {
+    max-width: 100%;
 }
 
-.modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+@media (min-width: 576px) {
+    .pokemon-card {
+        flex: 0 0 calc(33.333% - 20px);
+        max-width: calc(33.333% - 20px);
+    }
 }
